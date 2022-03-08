@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__top">
+              <nav class="menu">
+                <button class="menu__btn">
+                    <span class="row"></span>
+                </button>
+                <ul class="menu__list">
+                  <li class="menu__item"><a class="menu__link" href="#making">Что делает CSS?</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#syntax">Синтаксис</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#cascade">Каскады</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#priorities">Приоритеты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <h1 class="header__title">Обзор CSS 3</h1>
+            <p class="header__descr">Каскадные таблицы стилей третьего поколения<br>Оформление веб-страниц</p>
+            <div class="header__content">
+              <div class="header__arrow">
+                <a href="#" class="header__arrow-link"><img src="img/arrow-up-solid.svg" alt="" class="header__arrow-img" width="50px" height="50px"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about-content">
+              <h2 class="about__title title">CSS</h2>
+              <p class="about__text">
+                CSS (англ. Cascading Style Sheets) — это "каскадные таблицы стилей", код, с помощью которого расширяются возможности HTML для оформления веб-страниц.
+              </p>
+              <p class="about__text">CSS используется создателями веб-страниц для задания цветов, шрифтов, стилей, расположения отдельных блоков и других аспектов представления внешнего вида этих веб-страниц.</p>
+              <a href="https://ru.wikipedia.org/wiki/CSS" class="about__link">Читать подробней</a>
+            </div>
+            <div class="about__popup">
+              <a href="https://www.youtube.com/watch?v=mDugDm1Lq0Y" class="popup__link">
+                <img src="img/popup.svg" alt="" class="about__link-img" alt="Запустить видео">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="make" id="making">
+        <div class="container">
+          <h2 class="make__title title">Что делает CSS?</h2>
+          <div class="make__box">
+            <p class="make__text">
+                Ответим на вопрос о том, что делает CSS. Всё просто: если HTML структурирует контент на странице, то CSS позволяет отформатировать его, сделать более привлекательным для читателя. Изначально веб-разработчики использовали исключительно HTML — так было на заре развития интернет-технологий. 
+                С помощью разметки можно было выделить параграф, заголовок, изменить начертание текста. А большего и не требовалось.
+            </p>
+            <p class="make__text">
+                Со временем этих возможностей стало мало — и появилась технология форматирования без изменения самого содержимого и структуры документа. CSS решил проблему «зоопарка» тегов форматирования, когда разные браузеры поддерживали разные теги. Их унификация и единая база упростили работу с веб-документами и облегчили жизнь веб-мастерам.
+            </p>
+            <p class="make__text">  
+                CSS используется для определения стилей (правил) оформления документов — включая дизайн, вёрстку и вариации макета для различных устройств и размеров экрана. У такого способа форматирования несколько достоинств:
+              </p>
+              <ul>
+                  <li>теги не дублируются;</li>
+                  <li>документ проще обслуживать;</li>
+                  <li>внешний вид всего сайта можно изменить централизованно, а не корректировать форматирование каждой странички.</li>
+              </ul>
+          </div>
+        </div>
+    </section>
+
+    <section class="syntax" id="syntax">
+        <div class="container">
+          <h2 class="syntax__title title">Синтаксис CSS</h2>
+          <div class="syntax__box">
+            <p class="syntax__text">
+                У языка CSS относительно простой синтаксис. Сначала прописывается селектор — он выбирает конкретный элемент на странице. Потом, после фигурных скобок, указываются свойства со значениями — между ними ставится двоеточие. Сами свойства отделяются друг от друга точкой с запятой.
+            </p>
+                <figure class="syntax__link-img">
+                    <img src="img/rule.png" class="syntax__img" alt="Правило CSS">
+                    <figcaption>CSS правило</figcaption>
+                </figure>
+            <p class="syntax__text">
+                Что такое селектор в CSS? Это конструкция, которая позволяет выбрать отдельные или однотипные элементы на странице, чтобы их стилизовать. С селектора начинается каждый блок объявлений в CSS:</p>
+                <figure class="syntax__link-img">
+                    <img src="img/tag.png" class="syntax__img" alt="Селектор CSS">
+                    <figcaption>Селектор CSS</figcaption>
+                </figure>
+            <p class="syntax__text">  
+                В качестве селектора в примере используется my-class. Все элементы с этим классом получают единое оформление — серый фон цвета #999.
+              </p>
+          </div>
+        </div>
+    </section>
+
+    <section class="cascade" id="cascade">
+        <div class="container">
+          <h2 class="cascade__title title">Каскады в CSS</h2>
+          <div class="cascade__box">
+            <p class="cascade__text">
+                И всё-таки почему CSS — это именно Cascading Style Sheets? Дело в том, что в единую схему стили организуются при помощи каскада. 
+                Вот простой пример, который также поможет понять, что такое CSS-код и как он выглядит:
+            </p>
+            <figure class="cascade__link-img">
+                <img src="img/cascade-1.png" class="syntax__img" alt="Пример 1">
+                <figcaption>Пример 1</figcaption>
+            </figure>
+            <p class="cascade__text">
+                При помощи каскадов мы присвоили элементу p красный цвет. Зелёный цвет, указанный выше красного, учитываться не будет. Используется то значение параметра, которое указано ниже, и это помогает избежать конфликтов. 
+                При этом размер шрифта — 20 пикселей — не меняется. Если упростить написанное выше, то получится:
+            </p>
+            <figure class="cascade__link-img">
+                <img src="img/cascade-2.png" class="syntax__img" alt="Пример 2">
+                <figcaption>Пример 2</figcaption>
+            </figure>
+            <p class="cascade__text">
+                Кроме того, один элемент можно сделать зависимым от нескольких селекторов разного типа. Пример:
+            </p>
+            <figure class="cascade__link-img">
+                <img src="img/cascade-3.png" class="syntax__img" alt="Пример 3">
+                <figcaption>Пример 3</figcaption>
+            </figure>
+            <p class="cascade__text">
+                Чтобы использовать все параметры, в HTML указываем:</p>
+            <figure class="cascade__link-img">
+                <img src="img/cascade-4.png" class="syntax__img" alt="Пример 4">
+                <figcaption>Пример 4</figcaption>
+            </figure>
+            <p class="cascade__text">
+                Здесь мы присвоили элементу следующие свойства: он красный, размером 20 пикселей и написан курсивом. 
+                Важно, что в данном случае у разных селекторов — разный приоритет. Их порядок:</p>
+            <ol>
+                <li>Селектор типа элемента (p).</li>
+                <li>Селектор класса (.important).</li>
+                <li>Селектор id (#intro).</li>
+            </ol>
+            <p class="cascade__text">
+                1 — низкий приоритет, 3 — высокий.</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="priorities" id="priorities">
+        <div class="container">
+          <h2 class="priorities__title title">Приоритеты в CSS</h2>
+          <div class="priorities__box">
+            <p class="priorities__text">
+                Обговорим подробнее вопрос приоритетов. Их иерархия работает следующим образом:
+            </p>
+            <ol>
+                <li>Самый высокий приоритет у свойств, в конце объявления которых указано !important.</li>
+                <li>Затем идут inline-стили, которые прописываются в теге через атрибут style.</li>
+                <li>Ещё ниже приоритет стилей, заданных в теге style в самом документе.</li>
+                <li>Далее следуют стили, подключённые к документу как внешний CSS-файл с использованием тега link.</li>
+            </ol>
+          </div>
+        </div>
+    </section>
+
+    <section class="link">
+        <div class="container">
+          <h2 class="link__title title">Дальнейшее изучение</h2>
+          <div class="link__box">
+            <ul class="link__list">
+                <li><a href="https://webref.ru/css " class="link__link">https://webref.ru/css</a> - Узнайте о все возможных свойствах</li>
+                <li><a href="https://www.youtube.com/watch?v=vkq7ckCkvjY" class="link__link">https://www.youtube.com</a> - Видео с полным процессом верстки.</li>
+                <li><a href="https://htmlacademy.ru/blog/boost/tools/figma" class="link__link">https://htmlacademy.ru</a> - Верстать с фигмы.</li>
+                <li><a href="https://tproger.ru/translations/responsive-web-design-tips/" class="link__link">https://tproger.ru</a> - Статья про адаптивную верстку</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+</body>
+</html>
